@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		709094241ECE4EB282F054F0 /* PixelBuffer+Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCAEEE25693442C82878D0C /* PixelBuffer+Analysis.swift */; };
 		9AC09A6A58E619CCD862F4F0 /* CardDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2194BE41087F9C53836C5258 /* CardDetectorTests.swift */; };
 		B7D4B21C69E5F5AE221D2BF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93D101A7F32BBC1A166086 /* ContentView.swift */; };
 		F6BC95B2E6DCB0AD5F7DEDB8 /* BinaryCardScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C5446D616310A8EA1154A /* BinaryCardScannerApp.swift */; };
@@ -31,6 +32,7 @@
 		9FCE983F774837D7F74BCF7C /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		B9B38A5ED91F4594B8F66936 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		BDFD6E619E538958F22AF6FA /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		BFCAEEE25693442C82878D0C /* PixelBuffer+Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PixelBuffer+Analysis.swift"; sourceTree = "<group>"; };
 		C39A4C3FD9F3672828DA6950 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
 		E1F27EDAA8296BB61B9F34CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFD6E619E538958F22AF6FA /* .gitkeep */,
+				BFCAEEE25693442C82878D0C /* PixelBuffer+Analysis.swift */,
 			);
 			path = Detection;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			files = (
 				F6BC95B2E6DCB0AD5F7DEDB8 /* BinaryCardScannerApp.swift in Sources */,
 				B7D4B21C69E5F5AE221D2BF4 /* ContentView.swift in Sources */,
+				709094241ECE4EB282F054F0 /* PixelBuffer+Analysis.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +247,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -250,6 +255,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.binarycard.BinaryCardScannerTests;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BinaryCardScanner.app/BinaryCardScanner";
 			};
@@ -339,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,6 +353,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.binarycard.BinaryCardScannerTests;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BinaryCardScanner.app/BinaryCardScanner";
 			};
