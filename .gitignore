@@ -1,0 +1,4 @@
+# Local secrets and SSH hints — never commit
+.env/
+.gstack/
+.worktrees/
