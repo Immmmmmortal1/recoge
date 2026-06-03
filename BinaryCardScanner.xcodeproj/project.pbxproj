@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AC09A6A58E619CCD862F4F0 /* CardDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2194BE41087F9C53836C5258 /* CardDetectorTests.swift */; };
+		B7D4B21C69E5F5AE221D2BF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A93D101A7F32BBC1A166086 /* ContentView.swift */; };
+		F6BC95B2E6DCB0AD5F7DEDB8 /* BinaryCardScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342C5446D616310A8EA1154A /* BinaryCardScannerApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F76827D0607F202F196CC78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 617EA60293A301870ECC7D48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 231FBDB3DD37951B03124758;
+			remoteInfo = BinaryCardScanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2194BE41087F9C53836C5258 /* CardDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetectorTests.swift; sourceTree = "<group>"; };
+		2A93D101A7F32BBC1A166086 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2C1A40E0C15D237739CE3F02 /* BinaryCardScannerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = BinaryCardScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		342C5446D616310A8EA1154A /* BinaryCardScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryCardScannerApp.swift; sourceTree = "<group>"; };
+		45A9CA0585B3DD770ED0A073 /* BinaryCardScanner.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BinaryCardScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FCE983F774837D7F74BCF7C /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		B9B38A5ED91F4594B8F66936 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		BDFD6E619E538958F22AF6FA /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		C39A4C3FD9F3672828DA6950 /* .gitkeep */ = {isa = PBXFileReference; path = .gitkeep; sourceTree = "<group>"; };
+		E1F27EDAA8296BB61B9F34CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2B4EA22E7049745DFF5A3096 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45A9CA0585B3DD770ED0A073 /* BinaryCardScanner.app */,
+				2C1A40E0C15D237739CE3F02 /* BinaryCardScannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F59BCA1C2A4C906E7AB983B = {
+			isa = PBXGroup;
+			children = (
+				A09542397E37B7DDD8543090 /* BinaryCardScanner */,
+				C93EB5682AC9BBAEC9334FC6 /* BinaryCardScannerTests */,
+				2B4EA22E7049745DFF5A3096 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7968F9A932C93173D84EE615 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				B9B38A5ED91F4594B8F66936 /* .gitkeep */,
+			);
+			path = Speech;
+			sourceTree = "<group>";
+		};
+		8A6F6FB0723E89F534A54968 /* Detection */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD6E619E538958F22AF6FA /* .gitkeep */,
+			);
+			path = Detection;
+			sourceTree = "<group>";
+		};
+		945378608BA060AB5E9B3048 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A93D101A7F32BBC1A166086 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A09542397E37B7DDD8543090 /* BinaryCardScanner */ = {
+			isa = PBXGroup;
+			children = (
+				E1F27EDAA8296BB61B9F34CC /* Info.plist */,
+				B962456B17FB09446C5FD62E /* App */,
+				DB921519AB36FB109E98536F /* Camera */,
+				8A6F6FB0723E89F534A54968 /* Detection */,
+				7968F9A932C93173D84EE615 /* Speech */,
+				DE594DE5447A14685C4207A6 /* ViewModel */,
+				945378608BA060AB5E9B3048 /* Views */,
+			);
+			path = BinaryCardScanner;
+			sourceTree = "<group>";
+		};
+		B962456B17FB09446C5FD62E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				342C5446D616310A8EA1154A /* BinaryCardScannerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C93EB5682AC9BBAEC9334FC6 /* BinaryCardScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2194BE41087F9C53836C5258 /* CardDetectorTests.swift */,
+			);
+			path = BinaryCardScannerTests;
+			sourceTree = "<group>";
+		};
+		DB921519AB36FB109E98536F /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				C39A4C3FD9F3672828DA6950 /* .gitkeep */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		DE594DE5447A14685C4207A6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9FCE983F774837D7F74BCF7C /* .gitkeep */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		231FBDB3DD37951B03124758 /* BinaryCardScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A77BE9DF07C081CAB51F5CB2 /* Build configuration list for PBXNativeTarget "BinaryCardScanner" */;
+			buildPhases = (
+				2589EC784AF1B4EAED22C793 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BinaryCardScanner;
+			packageProductDependencies = (
+			);
+			productName = BinaryCardScanner;
+			productReference = 45A9CA0585B3DD770ED0A073 /* BinaryCardScanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		25371B033F7F06558FFE4ED3 /* BinaryCardScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3654A4CEA282D95411117AA3 /* Build configuration list for PBXNativeTarget "BinaryCardScannerTests" */;
+			buildPhases = (
+				2E5EF3CAF03E089528A10BC6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F12087AE081AB88B0B3C8F98 /* PBXTargetDependency */,
+			);
+			name = BinaryCardScannerTests;
+			packageProductDependencies = (
+			);
+			productName = BinaryCardScannerTests;
+			productReference = 2C1A40E0C15D237739CE3F02 /* BinaryCardScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		617EA60293A301870ECC7D48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = EE8FE371D79CCD8CB4485A62 /* Build configuration list for PBXProject "BinaryCardScanner" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 4F59BCA1C2A4C906E7AB983B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2B4EA22E7049745DFF5A3096 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				231FBDB3DD37951B03124758 /* BinaryCardScanner */,
+				25371B033F7F06558FFE4ED3 /* BinaryCardScannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2589EC784AF1B4EAED22C793 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6BC95B2E6DCB0AD5F7DEDB8 /* BinaryCardScannerApp.swift in Sources */,
+				B7D4B21C69E5F5AE221D2BF4 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E5EF3CAF03E089528A10BC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC09A6A58E619CCD862F4F0 /* CardDetectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F12087AE081AB88B0B3C8F98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 231FBDB3DD37951B03124758 /* BinaryCardScanner */;
+			targetProxy = 3F76827D0607F202F196CC78 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12DACC927B4F23D74E672D5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BinaryCardScanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.binarycard.BinaryCardScanner;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20D7384287379892593BF139 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.binarycard.BinaryCardScannerTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BinaryCardScanner.app/BinaryCardScanner";
+			};
+			name = Release;
+		};
+		767A4D8E4281EE0D7E0106C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E85578CA2BF0F51D695C250E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BinaryCardScanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.binarycard.BinaryCardScanner;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF6F6E04D57D29F54250912C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.binarycard.BinaryCardScannerTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BinaryCardScanner.app/BinaryCardScanner";
+			};
+			name = Debug;
+		};
+		F83802A86E395DBA57AE4F3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3654A4CEA282D95411117AA3 /* Build configuration list for PBXNativeTarget "BinaryCardScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF6F6E04D57D29F54250912C /* Debug */,
+				20D7384287379892593BF139 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A77BE9DF07C081CAB51F5CB2 /* Build configuration list for PBXNativeTarget "BinaryCardScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12DACC927B4F23D74E672D5F /* Debug */,
+				E85578CA2BF0F51D695C250E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EE8FE371D79CCD8CB4485A62 /* Build configuration list for PBXProject "BinaryCardScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				767A4D8E4281EE0D7E0106C7 /* Debug */,
+				F83802A86E395DBA57AE4F3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 617EA60293A301870ECC7D48 /* Project object */;
+}

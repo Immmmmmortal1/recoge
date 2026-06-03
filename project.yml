@@ -1,0 +1,38 @@
+name: BinaryCardScanner
+options:
+  bundleIdPrefix: com.binarycard
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.0"
+
+targets:
+  BinaryCardScanner:
+    type: application
+    platform: iOS
+    sources:
+      - BinaryCardScanner
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.binarycard.BinaryCardScanner
+        SWIFT_VERSION: 5.9
+        INFOPLIST_FILE: BinaryCardScanner/Info.plist
+    info:
+      path: BinaryCardScanner/Info.plist
+      properties:
+        CFBundleName: BinaryCardScanner
+        CFBundleDisplayName: 卡片扫描
+        NSCameraUsageDescription: 需要访问相机来扫描卡片侧面的二进制标记
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+
+  BinaryCardScannerTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - BinaryCardScannerTests
+    dependencies:
+      - target: BinaryCardScanner
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.binarycard.BinaryCardScannerTests
