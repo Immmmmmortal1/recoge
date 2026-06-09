@@ -3,77 +3,87 @@ import SwiftUI
 struct ScanOverlayView: View {
     let detectedCards: [Int]
     let statusMessage: String
-
-    // Guide zone matches CameraManager.guideNormalizedRect
-    private let guideX: CGFloat = 0.25
-    private let guideY: CGFloat = 0.10
-    private let guideW: CGFloat = 0.50
-    private let guideH: CGFloat = 0.80
+    var debugFrame: CGImage? = nil
 
     var body: some View {
         GeometryReader { geo in
-            let gRect = CGRect(
-                x: geo.size.width  * guideX,
-                y: geo.size.height * guideY,
-                width:  geo.size.width  * guideW,
-                height: geo.size.height * guideH
-            )
+            let guideRect = GuideZone.rect(in: geo.size)
 
-            ZStack(alignment: .top) {
-                // Dim outside guide zone
+            ZStack {
                 Color.black.opacity(0.45)
                     .mask(
                         Rectangle()
                             .overlay(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .frame(width: gRect.width, height: gRect.height)
-                                    .offset(x: gRect.minX - geo.size.width / 2,
-                                            y: gRect.minY - geo.size.height / 2)
+                                RoundedRectangle(cornerRadius: 10)
+                                    .frame(width: guideRect.width, height: guideRect.height)
+                                    .position(x: guideRect.midX, y: guideRect.midY)
                                     .blendMode(.destinationOut)
                             )
                     )
 
-                // Guide border
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.yellow, lineWidth: 2)
-                    .frame(width: gRect.width, height: gRect.height)
-                    .position(x: gRect.midX, y: gRect.midY)
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.yellow, lineWidth: 2.5)
+                    .frame(width: guideRect.width, height: guideRect.height)
+                    .position(x: guideRect.midX, y: guideRect.midY)
 
-                // Status label
-                Text(statusMessage)
-                    .font(.caption)
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 4)
-                    .background(Color.black.opacity(0.55))
-                    .cornerRadius(6)
-                    .padding(.top, 12)
+                VStack(spacing: 10) {
+                    Text(statusMessage)
+                        .font(.subheadline.weight(.medium))
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 14)
+                        .padding(.vertical, 8)
+                        .background(Color.black.opacity(0.65))
+                        .cornerRadius(8)
+                        .padding(.top, max(8, guideRect.minY - 52))
 
-                // Results row
-                if !detectedCards.isEmpty {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 10) {
-                            ForEach(Array(detectedCards.enumerated()), id: \.offset) { idx, val in
-                                VStack(spacing: 2) {
-                                    Text("No.\(idx + 1)")
-                                        .font(.caption2)
-                                        .foregroundColor(.gray)
-                                    Text("\(val)")
-                                        .font(.title3.bold())
-                                        .foregroundColor(.white)
+                    if !detectedCards.isEmpty {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 10) {
+                                ForEach(Array(detectedCards.enumerated()), id: \.offset) { idx, val in
+                                    VStack(spacing: 2) {
+                                        Text("No.\(idx + 1)")
+                                            .font(.caption2)
+                                            .foregroundColor(.gray)
+                                        Text("\(val)")
+                                            .font(.title3.bold())
+                                            .foregroundColor(.white)
+                                    }
+                                    .padding(8)
+                                    .background(Color.black.opacity(0.72))
+                                    .cornerRadius(8)
                                 }
-                                .padding(6)
-                                .background(Color.black.opacity(0.65))
-                                .cornerRadius(8)
                             }
+                            .padding(.horizontal, 8)
                         }
-                        .padding(.horizontal, 16)
+                        .frame(maxWidth: guideRect.width + 40)
                     }
-                    .frame(height: 56)
-                    .padding(.top, geo.size.height - 150)
+
+                    Spacer(minLength: 0)
+                }
+                .frame(width: geo.size.width, height: geo.size.height, alignment: .top)
+
+                if let debugFrame {
+                    VStack {
+                        Spacer()
+                        HStack {
+                            VStack(spacing: 2) {
+                                Text("检测器输入")
+                                    .font(.caption2)
+                                    .foregroundColor(.yellow)
+                                Image(decorative: debugFrame, scale: 1, orientation: .up)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(maxWidth: 120, maxHeight: 200)
+                                    .border(Color.yellow, width: 1)
+                            }
+                            Spacer()
+                        }
+                        .padding(.leading, 12)
+                        .padding(.bottom, 130)
+                    }
                 }
             }
-            .frame(width: geo.size.width, height: geo.size.height)
         }
     }
 }

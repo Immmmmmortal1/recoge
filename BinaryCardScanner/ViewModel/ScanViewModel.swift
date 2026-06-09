@@ -1,10 +1,13 @@
+import CoreGraphics
 import Foundation
 
 @MainActor
 final class ScanViewModel: ObservableObject {
 
     @Published var detectedCards: [Int] = []
-    @Published var statusMessage: String = "将卡片侧边对准扫描框"
+    @Published var statusMessage: String = "将卡片蓝色条码区对准黄框"
+    /// The exact crop the detector sees. Shown on-screen for debugging capture orientation/crop.
+    @Published var debugFrame: CGImage?
 
     private let camera: CameraManager
     private let speech = SpeechService()
@@ -14,18 +17,17 @@ final class ScanViewModel: ObservableObject {
     }
 
     func scanAndBroadcast() {
-        guard let frame = camera.captureGuidedFrame() else {
-            statusMessage = "无法获取图像"
-            return
-        }
-        let results = CardDetector.detect(in: frame)
-        if results.isEmpty {
-            statusMessage = "未检测到卡片"
-            detectedCards = []
-        } else {
-            detectedCards = results
-            statusMessage = "检测到 \(results.count) 张卡片"
-            speech.speak(results)
+        let colorFrame = camera.captureGuidedColorFrame()
+        let grayFrame = camera.captureGuidedFrame()
+        debugFrame = colorFrame
+        let outcome = CardDetector.scan(colorFrame: colorFrame, grayFrame: grayFrame)
+
+        detectedCards = outcome.cards
+        statusMessage = outcome.userMessage
+
+        let kinds = outcome.kinds
+        if !kinds.isEmpty {
+            speech.speak(kinds)
         }
     }
 }
